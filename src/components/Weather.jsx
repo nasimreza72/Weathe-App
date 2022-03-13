@@ -52,17 +52,17 @@ function Weather() {
       
 
       <div className="iconList">
-        <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          Wind: {windSpeed}kph
+        <div style={{ fontSize: '1.1rem', fontWeight: "bold" }}>
+        🍃 {windSpeed}kph
         </div>
-        <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-         Humidity: {humidity}%
+        <div style={{ fontSize: '1.1rem', fontWeight: "bold" }}>
+        💦  {humidity}%
         </div>
-        <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          SAunrise: {sunRise}
+        <div style={{ fontSize: '1.1rem', fontWeight: "bold" }}>
+        🌄 {sunRise}
         </div>
-        <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          Sunset: {sunSet}
+        <div style={{ fontSize: '1.1rem', fontWeight: "bold" }}>
+        🌅  {sunSet}
         </div>
       </div>
 
