@@ -9,8 +9,8 @@ function Navigation() {
   return (
     <Navbar expand="lg">
       <Container fluid>
-        <Navbar.Brand style={{fontSize:"2rem", paddingLeft: "0px", 
-        textShadow: '1px 1px 1.5px #D5F4FF' 
+        <Navbar.Brand style={{fontSize:"1.5rem", paddingLeft: "0px", 
+        textShadow: '.5px .5px .75px #D5F4FF' 
       }}  href="#">Weather PRO</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">

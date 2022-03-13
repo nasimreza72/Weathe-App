@@ -56,13 +56,13 @@ function Weather() {
         🍃 {windSpeed}kph
         </div>
         <div style={{ fontSize: '1.1rem', fontWeight: "bold" }}>
-        💦  {humidity}%
+        💦  {humidity}% 
         </div>
         <div style={{ fontSize: '1.1rem', fontWeight: "bold" }}>
-        🌄 {sunRise}
+        🌄 {sunRise} 
         </div>
         <div style={{ fontSize: '1.1rem', fontWeight: "bold" }}>
-        🌅  {sunSet}
+        🌅  {sunSet} 
         </div>
       </div>
 

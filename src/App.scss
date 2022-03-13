@@ -23,7 +23,6 @@ body {
     Nav{
       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
       background: radial-gradient(circle at 10% 20%, rgba(0, 52, 89, 0.863) 0%, rgb(1, 148, 206) 90%);
-      color: white;
     }
 
       a{
@@ -34,12 +33,15 @@ body {
           padding-left: 2.75vw;
        
          &:hover{
-              color: rgb(31, 2, 2);
+         color: #fdb44b;
+            
           }
       }
       main {
         width: 100;
         padding: 0 1%;
+        color: rgb(73, 73, 73);
+
 
         
         .inputButton{
@@ -50,7 +52,7 @@ body {
           align-items: center;
 
           input{
-            padding: .5vw;
+            padding: 10px;
             border-radius: 10px;
             border: none;
             font-size: 1rem;
@@ -61,7 +63,7 @@ body {
           }
 
           button{
-            padding: .5vw 1vw;
+            padding: 10px 25px;
             border-radius: 10px;
             border: none;
             font-size: 1rem;
@@ -82,19 +84,23 @@ body {
 
         .date-info{
           font-size: 3rem;
-          text-shadow: 1px 1px 1.5px rgb(19, 86, 148)
+          text-shadow: 1px 1px 1.5px rgb(19, 86, 148);
         }
 
         .weather{
           span{
             font-size: 8.5rem;
             text-shadow: 3px 3px 4.5px rgb(19, 86, 148);
+            color: black;
         }
 
         .iconList{
           width: 100%;
           display: flex;
-          justify-content: space-around;
+          div{
+            margin-right: 2vw;
+          }
+          // justify-content: space-around;
         }
     
         }
