@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { userContext } from "../Context/Context.jsx";
 import moment from "moment";
-import { Icon } from "@iconify/react";
 
 function Weather() {
   const {
@@ -54,16 +53,16 @@ function Weather() {
 
       <div className="iconList">
         <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          <Icon icon="ep:wind-power" /> {windSpeed}kph
+          Wind: {windSpeed}kph
         </div>
         <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          <Icon icon="iwwa:humidity" /> {humidity}%
+         Humidity: {humidity}%
         </div>
         <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          <Icon icon="bi:sunrise" /> {sunRise}
+          SAunrise: {sunRise}
         </div>
         <div style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          <Icon icon="bi:sunset" /> {sunSet}
+          Sunset: {sunSet}
         </div>
       </div>
 
