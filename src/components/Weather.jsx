@@ -21,6 +21,27 @@ function Weather() {
   return (
     <div className="weather">
 
+
+{/* <div className="sunPNG">
+        <img
+          src="https://png2.cleanpng.com/sh/156cfe297f19ed87b04ff6e1145292af/L0KzQYi4UcI5N5U5e5GAYUHnQIPsWcJnP5VpUJCBOES3RIeAVsE2OWI9TaICMkm0SYW8TwBvbz==/5a1d02e92f7dd8.6844467615118507291945.png"
+          alt=""
+        />
+      </div> */}
+      <div className="cloudPNG">
+        <img
+          src="https://www.transparentpng.com/thumb/clouds/AjeEHR-clouds-best-png.png"
+          alt="clouds best png @transparentpng.com"
+        ></img>
+      </div> 
+
+
+
+
+
+
+
+
       <div className="date-info">{location}</div>   
       <div
         style={{

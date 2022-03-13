@@ -22,8 +22,8 @@ function Navigation() {
             <NavLink to="/main/weather">HOME</NavLink>
             <NavLink to="/main/metar">METAR</NavLink>
             <NavLink to="/main/taf">TAF</NavLink>
-            <NavLink to="/main/metar-taf">METAR / TAF</NavLink>
-            <NavLink to="/main/metar-taf-decoded">METAR/TAF-Decoded</NavLink>
+            <NavLink to="/main/metar-taf">METAR | TAF</NavLink>
+            <NavLink to="/main/metar-taf-decoded">DECODED DATA</NavLink>
             <NavLink to="/main/archive">ARCHIVE</NavLink>
           </Nav>
         </Navbar.Collapse>

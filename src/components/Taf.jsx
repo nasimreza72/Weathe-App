@@ -8,7 +8,7 @@ function Taf(){
     return(
         <div>
             <span style={{fontSize:'1.5rem', fontWeight: 'bold'}}>{location}</span> <hr/>
-            {taf}
+            <strong>TAF: </strong>{taf}
         </div>
     )
 }

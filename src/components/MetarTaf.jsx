@@ -8,9 +8,9 @@ function MetarTaf(){
 
     return(
         <div>
-             <span style={{fontSize:'1.5rem', fontWeight: 'bold'}}>{location}</span> <hr/>
-            METAR: {raw_text}<br/>
-            TAF: {taf}
+            <span style={{fontSize:'1.5rem', fontWeight: 'bold'}}>{location}</span> <hr/>
+            <strong>METAR: </strong> {raw_text}<br/>
+            <strong>TAF: </strong> {taf}
         </div>
     )
 }

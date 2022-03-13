@@ -44,7 +44,7 @@ function MetarTafDecoded() {
     console.log("Decoded data", decoded.data);
 
     return (
-      <div style={{padding:"0 2vw"}}>
+      <div style={{textAlign:"center"}}>
         {/* Map through the object to fix missing Api format or same name objects all the data 
 
         {location}<hr/>
@@ -70,7 +70,7 @@ function MetarTafDecoded() {
         </span>
         <hr />
 
-        <div style={{ display: "flex", justifyContent:"space-between", flexWrap:"wrap" }}>
+        <div style={{ display: "flex", justifyContent:"space-around", flexWrap:"wrap" , textAlign:"left"}}>
 
           <div className="decoded-left-part" style={{marginBottom: "3vh"}}>
             <h4>TAF :</h4>

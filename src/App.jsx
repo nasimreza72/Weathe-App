@@ -7,7 +7,7 @@ function App(props) {
 
 
   return (
-    <div className="App">
+    <div className="App" style={{background:"rgba(255, 255, 255, 0.25)"}}>
       <Navigation />
       <Main />
     </div>

@@ -7,18 +7,18 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    // background-size: cover;
     // background: radial-gradient(circle at 10% 20%, rgba(91, 172, 254, 0.247) 0%, rgba(91, 224, 254, 0.26) 47.2%, rgba(45, 151, 221, 0.61) 49%);
-    background-image: url(../public/bg6.png);
+    background-image: url(https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position:center;
+  
 
     .App {
       width: 100%;
       height: 100vh;
       Navbar{
       width: 100%;
-      
     }
 
     Nav{
@@ -89,6 +89,9 @@ body {
         }
 
         .weather{
+          position: absolute;
+          top: 45vh;
+      
           span{
             font-size: 8.5rem;
             text-shadow: 3px 3px 4.5px rgb(19, 86, 148);
@@ -101,7 +104,6 @@ body {
           div{
             margin-right: 2vw;
           }
-          // justify-content: space-around;
         }
     
         }
@@ -111,3 +113,46 @@ body {
     }
   }
 }
+
+
+// testing animation
+
+
+// .sunPNG img{
+//   width: 350px;
+//   position: absolute;
+//   top: 2vh;
+//   right: 20%;
+//   animation: sunMove 60s linear 0s infinite normal;
+// }
+
+// @keyframes sunMove {
+//   from {
+//       transform: rotate(0deg);
+//     }
+//     to {
+//       transform: rotate(360deg);
+//     }
+// }
+
+.cloudPNG img{
+  width: 350px;
+  opacity: .65;
+  position:absolute;
+  top: 15vh;
+  left: 0%;
+  animation: cloudMove;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes cloudMove {
+  from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(85%);
+    }
+} 

@@ -8,7 +8,7 @@ function Metar(){
     return(
         <div>
             <span style={{fontSize:'1.5rem', fontWeight: 'bold'}}>{location}</span> <hr/>
-            {raw_text}
+            <strong>METAR: </strong> {raw_text}
         </div>
     )
 }
