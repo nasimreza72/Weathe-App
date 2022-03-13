@@ -23,6 +23,8 @@ export default function APIFetching(props) {
     setICAO,
     setSunRise,
     setSunSet,
+    setMetarResult,
+    setMetarLoading,
   } = useContext(userContext);
 
   const params = {
@@ -62,8 +64,10 @@ export default function APIFetching(props) {
         setLocation(result.data[0].station.location);
         setRaw_text(result.data[0].raw_text);
         setICAO(result.data[0].icao);
+        setMetarResult(result)
+        setMetarLoading(true)
 
-        console.log(result);
+        console.log("Metar data", result);
       })
       .catch((error) => console.error(error));
   }, [longitude]);

@@ -20,10 +20,12 @@ export default function UserContextProvider (props) {
     const [ ICAO, setICAO ] = useState ("EDDB")
     const [ sunRise, setSunRise] = useState([])
     const [ sunSet, setSunSet] = useState([])
+    const [ metarResult, setMetarResult ] = useState([])
+    const [ metarLoading, setMetarLoading ] = useState(false)
 
     //all new state will go up and pass variable and function in the contextValue
 
-    const contextValue = { celsius, setCelsius, windSpeed, setWindSpeed, humidity, setHumidity, clouds, setClouds, location, setLocation, cityName, setCityName, latitude, setLatitude, longitude, setLongitude, raw_text,setRaw_text, taf, setTaf, decoded, setDecoded, loaded, setLoaded , ICAO, setICAO, sunRise, setSunRise, sunSet, setSunSet
+    const contextValue = { celsius, setCelsius, windSpeed, setWindSpeed, humidity, setHumidity, clouds, setClouds, location, setLocation, cityName, setCityName, latitude, setLatitude, longitude, setLongitude, raw_text,setRaw_text, taf, setTaf, decoded, setDecoded, loaded, setLoaded , ICAO, setICAO, sunRise, setSunRise, sunSet, setSunSet, metarResult, metarLoading, setMetarLoading, setMetarResult
     }
 
     return(
