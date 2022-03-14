@@ -4,13 +4,12 @@ import { userContext } from "../Context/Context.jsx";
 
 
 function Archive(){
-    const {location} = useContext(userContext)
+    const {archieveData} = useContext(userContext)
 
     return(
         <div>
-            <span style={{fontSize:'1.5rem', fontWeight: 'bold'}}>{location}</span> <hr/>
-
-            <div>coming soon..........</div>
+            {/* <pre>{JSON.stringify(archieveData,0," ")}</pre> */}
+            {archieveData.map(item=><p>{item}</p>)}
         </div>
         
     )

@@ -26,7 +26,9 @@ export default function APIFetching(props) {
     setSunRise,
     setSunSet,
     setMetarResult,
-    setMetarLoading
+    setMetarLoading,
+    archieveData,
+    setArchieveData
   } = useContext(userContext);
 
   const params = {
@@ -67,8 +69,8 @@ export default function APIFetching(props) {
         setICAO(result.data[0].icao);
         setMetarResult(result)
         setMetarLoading(true)
-
-        console.log("Metar data", result);
+        setArchieveData([...archieveData,result.data[0].station.location,result.data[0].raw_text])
+        localStorage.setItem("archieveData",JSON.stringify(archieveData))
       })
       .catch((error) => console.error(error)); 
     },[longitude]);
@@ -88,7 +90,6 @@ export default function APIFetching(props) {
         setTaf(result.data[0].raw_text);
         setDecoded(result);
         setLoaded(true);
-        console.log("secondResult", result);
       })
       .catch((error) => console.error(error));
   }, [longitude]);
@@ -105,4 +106,9 @@ export default function APIFetching(props) {
       })
       .catch((error) => console.error(error));
   }, [ICAO]);
+
+  // writes the METAR into Local storage
+//   useEffect(()=>{
+//     localStorage.setItem("archieveData",JSON.stringify(archieveData))
+//   },[archieveData])
 }

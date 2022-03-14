@@ -1,12 +1,15 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import {useContext} from "react";
 import { userContext } from "../Context/Context.jsx";
 
 
 function Input(props){
 
-    const { setCityName} =useContext(userContext)
+    const { setCityName, cityName} =useContext(userContext)
 
+    useEffect(()=>{
+        localStorage.setItem("cityName",JSON.stringify(cityName))
+    },[cityName])
     
     const input = useRef()
     
