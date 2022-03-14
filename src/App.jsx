@@ -24,7 +24,7 @@ function App(props) {
     {on===false ?     <div>
      <h1>Welcome to Weather PRO website.</h1>
       <form action="" onSubmit={Login}>
-    <input type="password" ref={inputCode} />
+    <input type="password" ref={inputCode} placeholder={"please input: 15032022"}/>
       <button >login</button>
     </form>
      </div> : ""}
