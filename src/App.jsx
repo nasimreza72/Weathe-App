@@ -21,14 +21,14 @@ function App(props) {
   return (
     <div className="App" style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column", padding:5}}  >
 
-    {on===false ?     <div>
+    {/* {on===false ?     <div>
      <h1>Welcome to Weather PRO website.</h1>
       <form action="" onSubmit={Login}>
     <input type="password" ref={inputCode} />
-      <button >login</button>
+      <button className="loginButton" >login</button>
     </form>
      </div> : ""}
-
+ */}
 
     {login==='15032022' ? 
 
@@ -37,11 +37,17 @@ function App(props) {
       <Main />
     </div>
 
-    : "" }
+    : 
 
-     
+    <div>
+      <h1>Welcome to Weather PRO website.</h1>
+       <form action="" onSubmit={Login}>
+     <input type="password" ref={inputCode} />
+       <button className="loginButton" >login</button>
+     </form>
+      </div> 
 
-    </div>
-  );
+}
+    </div> )
 }
 export default App;
