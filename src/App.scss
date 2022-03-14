@@ -42,8 +42,6 @@ body {
         width: 100;
         padding: 0 1%;
         color: rgb(36, 36, 36);
-
-
         
         .inputButton{
           width: 100%;
@@ -89,9 +87,7 @@ body {
         }
 
         .weather{
-          position: absolute;
-          top: 45vh;
-      
+          padding-top: 20vh;
           span{
             font-size: 8.5rem;
             text-shadow: 3px 3px 4.5px rgb(19, 86, 148);
@@ -117,34 +113,17 @@ body {
 
 // testing animation
 
-
-// .sunPNG img{
-//   width: 350px;
-//   position: absolute;
-//   top: 2vh;
-//   right: 20%;
-//   animation: sunMove 60s linear 0s infinite normal;
-// }
-
-// @keyframes sunMove {
-//   from {
-//       transform: rotate(0deg);
-//     }
-//     to {
-//       transform: rotate(360deg);
-//     }
-// }
-
 .cloudPNG img{
   width: 350px;
-  opacity: .65;
-  position:absolute;
-  top: 15vh;
+  opacity: .8;
+  position:fixed;
+  top: 55vh;
   left: 0%;
   animation: cloudMove;
-  animation-duration: 60s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  overflow: hidden;
 }
 
 
@@ -153,6 +132,6 @@ body {
       transform: translateX(0%);
     }
     to {
-      transform: translateX(85%);
+      transform: translateX(80%);
     }
 } 
