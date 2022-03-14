@@ -39,41 +39,12 @@ body {
           }
       }
       main {
-        width: 100;
+        width: 100%;
         padding: 0 1%;
         color: rgb(36, 36, 36);
         
-        .inputButton{
-          width: 100%;
-          margin: 3vh 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          input{
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-            font-size: 1rem;
-            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-            text-shadow: .5px .5px .75px rgb(15, 86, 153);
-            
-
-          }
-
-          button{
-            padding: 10px 25px;
-            border-radius: 10px;
-            border: none;
-            font-size: 1rem;
-            background: #1c5174c2; 
-            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-            color: white;
-
-            &:hover{
-              font-weight: bold;
-            }
-          }
+       
+        
         
         }
 
@@ -106,7 +77,44 @@ body {
       }
     }
   }
+
+
+
+.inputButton{
+  width: 100%;
+  margin: 3vh 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+
+input{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  text-shadow: .5px .5px .75px rgb(15, 86, 153);
+  
+
+}
+
+button{
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+  background: #1c5174c2; 
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  color: white;
+
+  &:hover{
+    font-weight: bold;
+  }
+}
+
 
 
 // Clouds animation
