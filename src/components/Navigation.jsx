@@ -26,8 +26,6 @@ function Navigation() {
             <NavLink to="/main/metar-taf">METAR | TAF</NavLink>
             <NavLink to="/main/metar-taf-decoded">DECODED DATA</NavLink>
             <NavLink to="/main/archive">ARCHIVE</NavLink>
-            <NavLink to="/main/archive">?</NavLink>
-
           </Nav>
         </Navbar.Collapse>
       </Container>
