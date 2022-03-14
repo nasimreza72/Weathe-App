@@ -12,29 +12,32 @@ function App(props) {
   const inputCode = useRef()
 
 
-  function Login () {
+  function Login (e) {
+    e.preventDefault()
     setLogin(inputCode.current.value)
     setOn(true)
   }
 
   return (
-    <div className="App" style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column"}}  >
+    <div className="App" style={{display:"flex", justifyContent:"center", alignItems:"center", flexDirection:"column", padding:5}}  >
 
     {on===false ?     <div>
      <h1>Welcome to Weather PRO website.</h1>
-      <input type="password" ref={inputCode}  />
-      <button onClick={Login}>login</button>
-     </div> : null}
+      <form action="" onSubmit={Login}>
+    <input type="password" ref={inputCode} />
+      <button >login</button>
+    </form>
+     </div> : ""}
 
 
     {login==='15032022' ? 
 
-    <div style={{width:"100%", height:"100vh", position:"fixed", top:"0px", background:"rgba(255, 255, 255, 0.25)"}}>
+    <div style={{width:"100%", height:"100vh", background:"rgba(255, 255, 255, 0.25)"}}>
       <Navigation />
       <Main />
     </div>
 
-    : null }
+    : "" }
 
      
 
