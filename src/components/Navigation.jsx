@@ -4,14 +4,15 @@ import {
   Container,
   Nav
 } from "react-bootstrap";
+import logo from "./logo-opacity.png"
 
 function Navigation() {
   return (
     <Navbar expand="lg">
       <Container fluid>
-        <NavLink style={{fontSize:"1.5rem", paddingLeft: "0px", 
-        textShadow: '.5px .5px .75px #D5F4FF' 
-      }} to="/main/weather" >Weather PRO</NavLink>
+        <NavLink to="/main/weather">
+          <img src={logo} style={{width:"100px"}}/>
+          </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
