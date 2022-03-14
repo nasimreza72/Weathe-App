@@ -51,6 +51,7 @@ export default function APIFetching(props) {
   /////// Fetching API Data for Weather information from (METAR)
 
   useEffect(() => {
+    if(!latitude){return}
     const key = "?x-api-key=8cf71fb165574cd4a17423a33f";
   
       fetch(
@@ -75,6 +76,8 @@ export default function APIFetching(props) {
   //////////// fetching API Data for Forecast from (TAF)
 
   useEffect(() => {
+    if(!latitude){return}
+
     const key2 = "?x-api-key=8cf71fb165574cd4a17423a33f";
     fetch(
       `https://api.checkwx.com/taf/lat/${latitude}/lon/${longitude}/radius/50/decoded` +
