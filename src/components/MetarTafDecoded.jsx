@@ -36,15 +36,15 @@ function MetarTafDecoded() {
     setSunSet,
     metarResult,
     setMetarResult,
-    metarLoading, 
-    setMetarLoading
+    metarLoading,
+    setMetarLoading,
   } = useContext(userContext);
 
-  if (loaded === true && metarLoading=== true) {
+  if (loaded === true && metarLoading === true) {
     console.log("Decoded data", decoded.data);
 
     return (
-      <div style={{textAlign:"center"}}>
+      <div style={{ textAlign: "center" }}>
         {/* Map through the object to fix missing Api format or same name objects all the data 
 
         {location}<hr/>
@@ -65,14 +65,20 @@ function MetarTafDecoded() {
                     </div>
                 ))}  */}
 
-        <span style={{ fontSize: "1.5rem", fontWeight: "bold"}}>
+        <span style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
           {location}
         </span>
         <hr />
 
-        <div style={{ display: "flex", justifyContent:"space-around", flexWrap:"wrap" , textAlign:"left"}}>
-
-          <div className="decoded-left-part" style={{marginBottom: "3vh"}}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+            textAlign: "left",
+          }}
+        >
+          <div className="decoded-left-part" style={{ marginBottom: "3vh" }}>
             <h4>TAF :</h4>
             <strong>From:</strong> {decoded.data[0].forecast[0].timestamp.from}
             <br />
@@ -90,22 +96,18 @@ function MetarTafDecoded() {
               : "Data not found"}
           </div>
 
-          <div className="decoded-right-part" >
+          <div className="decoded-right-part">
             <h4>METAR :</h4>
-
             <strong>Released:</strong> {metarResult.data[0].observed} <br />
-
-            <strong>Wind: </strong> {metarResult.data[0].wind.degrees}° /  {metarResult.data[0].wind.speed_kph} kph <br />
-
-            <strong>Visibilty:</strong> {metarResult.data[0].visibility.meters} meters <br />
-
-          <strong>Clouds:</strong> {metarResult.data[0].clouds[0].text} <br />
-
-          <strong>Temperature:</strong> {metarResult.data[0].temperature.celsius}°C <br />
-
-          <strong>Pressure:</strong> {metarResult.data[0].barometer.hpa} hpa <br />
-
-
+            <strong>Wind: </strong> {metarResult.data[0].wind.degrees}° /{" "}
+            {metarResult.data[0].wind.speed_kph} kph <br />
+            <strong>Visibilty:</strong> {metarResult.data[0].visibility.meters}{" "}
+            meters <br />
+            <strong>Clouds:</strong> {metarResult.data[0].clouds[0].text} <br />
+            <strong>Temperature:</strong>{" "}
+            {metarResult.data[0].temperature.celsius}°C <br />
+            <strong>Pressure:</strong> {metarResult.data[0].barometer.hpa} hpa{" "}
+            <br />
           </div>
         </div>
 

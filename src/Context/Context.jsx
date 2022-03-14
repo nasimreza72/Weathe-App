@@ -6,7 +6,7 @@ export const userContext = React.createContext(null)
 export default function UserContextProvider (props) {
 
     const lastCity=localStorage.getItem("cityName")
-    const defaultCity=lastCity?JSON.parse(lastCity):"München"
+    const defaultCity=lastCity?JSON.parse(lastCity):"Berlin"
     
     const lastArchieveData=localStorage.getItem("archieveData")
     const defautlArchieveData=lastArchieveData?JSON.parse(lastArchieveData):[]

@@ -8,7 +8,6 @@ function Archive(){
 
     return(
         <div>
-            {/* <pre>{JSON.stringify(archieveData,0," ")}</pre> */}
             {archieveData.map(item=><p>{item}</p>)}
         </div>
         
