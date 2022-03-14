@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useContext } from "react";
 import { userContext } from "../Context/Context.jsx";
+import { Spinner } from "react-bootstrap";
+
 
 export default function APIFetching(props) {
   const {
@@ -24,7 +26,7 @@ export default function APIFetching(props) {
     setSunRise,
     setSunSet,
     setMetarResult,
-    setMetarLoading,
+    setMetarLoading
   } = useContext(userContext);
 
   const params = {
@@ -39,8 +41,7 @@ export default function APIFetching(props) {
       .get("http://api.positionstack.com/v1/forward", { params })
       .then((response) => {
         setLatitude(response.data.data[0].latitude);
-        setLongitude(response.data.data[0].longitude);
-        console.log(response);
+        setLongitude(response.data.data[0].longitude)
       })
       .catch((error) => {
         console.log(error);
@@ -51,10 +52,9 @@ export default function APIFetching(props) {
 
   useEffect(() => {
     const key = "?x-api-key=8cf71fb165574cd4a17423a33f";
-    fetch(
-      `https://api.checkwx.com/metar/lat/${latitude}/lon/${longitude}/radius/50/decoded` +
-        key
-    )
+  
+      fetch(
+      `https://api.checkwx.com/metar/lat/${latitude}/lon/${longitude}/radius/50/decoded`+key)
       .then((response) => response.json())
       .then((result) => {
         setCelsius(result.data[0].temperature.celsius);
@@ -69,8 +69,8 @@ export default function APIFetching(props) {
 
         console.log("Metar data", result);
       })
-      .catch((error) => console.error(error));
-  }, [longitude]);
+      .catch((error) => console.error(error)); 
+    },[longitude]);
 
   //////////// fetching API Data for Forecast from (TAF)
 
@@ -86,7 +86,6 @@ export default function APIFetching(props) {
         setDecoded(result);
         setLoaded(true);
         console.log("secondResult", result);
-        console.log(result.data[0].raw_text);
       })
       .catch((error) => console.error(error));
   }, [longitude]);
@@ -100,8 +99,6 @@ export default function APIFetching(props) {
       .then((result) => {
         setSunRise(result.data[0].sunrise_sunset.local.sunrise);
         setSunSet(result.data[0].sunrise_sunset.local.sunset);
-
-        // console.log(result.data[0].sunrise_sunset.local.sunrise);
       })
       .catch((error) => console.error(error));
   }, [ICAO]);

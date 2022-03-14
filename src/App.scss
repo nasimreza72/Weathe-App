@@ -8,7 +8,7 @@ body {
     margin: 0 auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     // background: radial-gradient(circle at 10% 20%, rgba(91, 172, 254, 0.247) 0%, rgba(91, 224, 254, 0.26) 47.2%, rgba(45, 151, 221, 0.61) 49%);
-    background-image: url(https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    background-image: url(../public/bg1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
@@ -103,24 +103,21 @@ body {
         }
     
         }
-
-
       }
     }
   }
 }
 
 
-// testing animation
+// Clouds animation
 
 .cloudPNG img{
   width: 350px;
   opacity: .8;
   position:fixed;
   top: 55vh;
-  left: 0%;
   animation: cloudMove;
-  animation-duration: 30s;
+  animation-duration: 45s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   overflow: hidden;
@@ -132,6 +129,6 @@ body {
       transform: translateX(0%);
     }
     to {
-      transform: translateX(80%);
+      transform: translateX(100%);
     }
 } 

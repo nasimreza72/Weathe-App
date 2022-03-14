@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { userContext } from "../Context/Context.jsx";
 import moment from "moment";
+import { Spinner } from "react-bootstrap";
+
 
 function Weather() {
   const {
@@ -16,31 +18,20 @@ function Weather() {
     setSunRise,
     sunSet,
     setSunSet,
+    metarLoading
   } = useContext(userContext);
+
+  if(metarLoading===true) {
 
   return (
     <div className="weather">
 
-
-{/* <div className="sunPNG">
-        <img
-          src="https://png2.cleanpng.com/sh/156cfe297f19ed87b04ff6e1145292af/L0KzQYi4UcI5N5U5e5GAYUHnQIPsWcJnP5VpUJCBOES3RIeAVsE2OWI9TaICMkm0SYW8TwBvbz==/5a1d02e92f7dd8.6844467615118507291945.png"
-          alt=""
-        />
-      </div> */}
       <div className="cloudPNG">
         <img
           src="https://www.transparentpng.com/thumb/clouds/AjeEHR-clouds-best-png.png"
           alt="clouds best png @transparentpng.com"
         ></img>
       </div> 
-
-
-
-
-
-
-
 
       <div className="date-info">{location}</div>   
       <div
@@ -89,6 +80,17 @@ function Weather() {
 
 
     </div>
-  );
+  )
+} else  {
+  return(
+    <div>
+    {" "}
+    LOADING <Spinner animation="border" size="sm" />
+    <Spinner animation="border" />
+    <Spinner animation="grow" size="sm" />
+    <Spinner animation="grow" />
+  </div>
+  )
+}
 }
 export default Weather;
