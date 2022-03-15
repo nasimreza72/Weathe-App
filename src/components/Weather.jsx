@@ -3,6 +3,7 @@ import { userContext } from "../Context/Context.jsx";
 import moment from "moment";
 import { Spinner } from "react-bootstrap";
 import LinearChartWeather from "./LinearChartWeather.jsx"
+import FetchWeekInput from "./FetchWeatherAPI.jsx"
 
 
 function Weather() {
@@ -25,7 +26,10 @@ function Weather() {
   if(metarLoading===true) {
 
   return (
+
+    
     <div className="weather">
+    <FetchWeekInput />
 
       <div className="cloudPNG">
         <img

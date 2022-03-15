@@ -33,6 +33,7 @@ export default function FetchWeekInput(){
 
     if(loadedForwardGeoCode){
         console.log(weeklyWeather)
+        console.log(latitude)
        
         // const date = new Date(weeklyWeather.daily[2].dt*1000-(weeklyWeather.timezone_offset*1000))
         // console.log(date)   

@@ -1,5 +1,6 @@
 import { userContext } from "../Context/Context";
 import {useContext, useEffect, useState } from "react"
+import FetchWeekInput from "./FetchWeatherAPI.jsx"
 
 
 import {
@@ -44,7 +45,7 @@ export default function LinearChartWeather(){
 
     const weekArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-    
+    console.log(weeklyWeather)
 
         if(!weeklyWeather.daily){return "loading"}
         console.log(weeklyWeather)
