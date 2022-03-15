@@ -1,7 +1,5 @@
 import { userContext } from "../Context/Context";
 import {useContext, useEffect, useState } from "react"
-import FetchWeekInput from "./FetchWeatherAPI.jsx"
-
 
 
 import {
@@ -25,26 +23,7 @@ export default function LinearChartWeather(){
 
 
 
-    // console.log(setWeaklyWeather)
-    // useEffect(()=>{
-
-    //     if(!longitude){return}
-
-    //     fetch(url)
-    //         .then(response => response.json())
-    //         .then(data => 
-    //             setWeaklyWeather(data))
-
-               
-
-
-    // },[longitude, latitude])
-
-    // console.log("its weather", weeklyWeather)
-
-    /////////////////////////////////////////////////////////////////////////
-
-    const weekArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    const weekArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
     console.log(weeklyWeather)
 
@@ -74,8 +53,8 @@ export default function LinearChartWeather(){
                 <AreaChart data={weeklyForecast}>
                     <defs>
                         <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="50%" stopColor="#FFFFFF" stopOpacity={0.6}></stop>
-                            <stop offset="75%" stopColor="#FFFFFF" stopOpacity={0.20}></stop>
+                            <stop offset="75%" stopColor="#348BBC" stopOpacity={0.9}></stop>
+                            <stop offset="50%" stopColor="#348BBC" stopOpacity={0.9}></stop>
                         </linearGradient>
                     </defs>
                     <Area dataKey="Temp" stroke="#2451B7" fill="url(#color)" />
@@ -99,7 +78,7 @@ export default function LinearChartWeather(){
 
                     <Tooltip />
 
-                    <CartesianGrid opacity={0.2} vertical={false}/>
+                    <CartesianGrid opacity={1} vertical={false}/>
 
                 </AreaChart>
             </ResponsiveContainer>

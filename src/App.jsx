@@ -3,7 +3,7 @@ import Navigation from "./components/Navigation.jsx"
 import Main from "./components/Main"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useRef, useState } from "react";
-import logo from "./image/logo-opacity.png"
+import logo from "./image/logo.png"
 
 function App(props) {
 
