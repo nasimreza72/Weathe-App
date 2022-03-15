@@ -162,18 +162,23 @@ button:hover {
   flex-wrap: wrap;
   align-items: center;
   font-size: 1rem;
+  // justify-content: space-between;
+  margin-left: 5vw;
   
 }
 
-.graph-container{
-  font-size: 1rem;
+.LinearChartWeather{
+width: 50vw;
+height: 35vh;
+margin-left: 10vw;
+
 }
 
-.chartBox{
-  width: 50vw;
-  height: 30vh;
-  margin-left: 3.6rem ;
-}
+// .chartBox{
+//   width: 50vw;
+//   height: 30vh;
+//   margin-left: 3.6rem ;
+// }
 
 
 
@@ -187,16 +192,17 @@ button:hover {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 650px) { 
-  .chartBox{
-    width: 90vw;
-    height: 30vh;
-    
-  }
-  .weather{ 
-    padding-top: 5px;}
+
+ 
     
   .front-page-logo{
     width: 80vw;
+  }
+
+  .LinearChartWeather{
+    width: 300px;
+    height: 150px;
+    margin-left: -5vw;
   }
   
 }
