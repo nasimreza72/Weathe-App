@@ -1,26 +1,38 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  padding: 0;
-  box-sizing: border-box;
 
   #root {
     max-width: 1200px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 10px 25px;
     margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    // background: radial-gradient(circle at 10% 20%, rgba(91, 172, 254, 0.247) 0%, rgba(91, 224, 254, 0.26) 47.2%, rgba(45, 151, 221, 0.61) 49%);
     background-image: url(../public/bg1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    scroll-behavior: smooth;
 
     .App {
       width: 100%;
       height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.205);
+
+      .App-wrapper{
+        width: 100%;
+        height: 100vh;
+      }
     }
 
-    Navbar {
-      max-width: 100%;
+    main {
+      padding: 1% ;
+      color: rgb(36, 36, 36);
     }
+
+
+
+  
     Nav {
       box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
         rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -34,30 +46,24 @@ body {
       text-decoration: none;
       font-weight: bold;
       color: white;
-      font-size: 1.15rem;
-      padding-right: 3.5vh;
+      font-size: 1rem;
+      padding-right: 4rem;
+      transition: .5s ease-in-out;
 
       &:hover {
         color: #fdb44b;
       }
     }
-    main {
-      padding: 0 ;
-      color: rgb(36, 36, 36);
-    }
-
-    // div {
-    //   font-size: 1.2rem;
-    // }
 
     .date-info {
       font-size: 3rem;
       text-shadow: 1px 1px 1.5px rgb(19, 86, 148);
     }
 
+  
     .weather {
-      padding-top: 20vh;
-      span {
+      padding-top: 1rem;
+      .temperature {
         font-size: 8.5rem;
         text-shadow: 3px 3px 4.5px rgb(19, 86, 148);
         color: black;
@@ -76,7 +82,6 @@ body {
 
 
 .inputButton {
-  // max-width: 100%;
   margin: 3vh 0;
   display: flex;
   justify-content: center;
@@ -102,10 +107,14 @@ input {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   color: white;
+  transition: .5s ease-in-out;
+
 }
 
+////////// Front page style start 
+
 .loginButton{
-  padding: 10px 45px;
+  padding: 10px 30px;
   border-radius: 10px;
   border: none;
   font-size: 1rem;
@@ -113,10 +122,25 @@ input {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   color: white;
+  transition: .5s ease-in-out;
+
 }
 
 button:hover {
-  font-weight: bold;
+  color: #fdb44b;
+}
+
+.nav-logo{
+  width: 100px;
+}
+
+.front-page-logo{
+  width: 400px;
+}
+
+.front-page-title{
+  color: #414141;
+  margin: 3vh 0 3vh 0;
 }
 
 // Clouds animation
@@ -133,6 +157,26 @@ button:hover {
   overflow: hidden;
 }
 
+.forecast{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1rem;
+  
+}
+
+.graph-container{
+  font-size: 1rem;
+}
+
+.chartBox{
+  width: 50vw;
+  height: 30vh;
+  margin-left: 3.6rem ;
+}
+
+
+
 @keyframes cloudMove {
   from {
     transform: translateX(0%);
@@ -141,3 +185,19 @@ button:hover {
     transform: translateX(100%);
   }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 650px) { 
+  .chartBox{
+    width: 90vw;
+    height: 30vh;
+    
+  }
+  .weather{ 
+    padding-top: 5px;}
+    
+  .front-page-logo{
+    width: 80vw;
+  }
+  
+}
+

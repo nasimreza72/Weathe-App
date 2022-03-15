@@ -1,17 +1,17 @@
 import { NavLink } from "react-router-dom";
+import logo from "../image/logo-opacity.png"
 import {
   Navbar,
   Container,
   Nav
 } from "react-bootstrap";
-import logo from "./logo-opacity.png"
 
 function Navigation() {
   return (
     <Navbar expand="lg">
       <Container fluid>
-        <NavLink to="/main/weather">
-          <img src={logo} style={{width:"100px"}}/>
+        <NavLink style={{ fontSize: "1.5rem" }} to="/main/weather">
+          <img className="nav-logo" src={logo} alt="" />
           </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -19,8 +19,6 @@ function Navigation() {
             className="p-2 d-flex "
             style={{ maxHeight: "190px" }}
             navbarScroll>
-{/* 
-            <NavLink to="/main/weather">HOME</NavLink> */}
             <NavLink to="/main/metar">METAR</NavLink>
             <NavLink to="/main/taf">TAF</NavLink>
             <NavLink to="/main/metar-taf">METAR | TAF</NavLink>

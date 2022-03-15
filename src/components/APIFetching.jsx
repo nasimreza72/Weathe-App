@@ -50,6 +50,8 @@ export default function APIFetching(props) {
       });
   }, [cityName]);
 
+  console.log(latitude)
+
   /////// Fetching API Data for Weather information from (METAR)
 
   useEffect(() => {
