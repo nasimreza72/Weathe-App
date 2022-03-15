@@ -48,13 +48,19 @@ function Weather() {
         {moment().format("llll")}
       </div>
 
-      <div>
-        <span>{celsius}</span>
+      <div className="forecast">
+
+        <span className="temperature">{celsius}</span>
+
         <span
           style={{ fontSize: "4rem", position: "relative", bottom: "1.5rem" }}
         >
           ℃
         </span>
+        
+        <div className="chartBox">
+            <LinearChartWeather className="chart"/>
+        </div>
       </div>
 
       
@@ -85,9 +91,7 @@ function Weather() {
         </div>
       </div>
 
-      <div>
-        <LinearChartWeather />
-      </div>
+      
 
 
     </div>
