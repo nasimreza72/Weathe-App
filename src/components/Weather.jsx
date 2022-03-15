@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { userContext } from "../Context/Context.jsx";
 import moment from "moment";
 import { Spinner } from "react-bootstrap";
+import LinearChartWeather from "./LinearChartWeather.jsx"
 
 
 function Weather() {
@@ -51,6 +52,8 @@ function Weather() {
           ℃
         </span>
       </div>
+
+      
       <div
         style={{
           fontSize: "1.5rem",
@@ -76,6 +79,10 @@ function Weather() {
         <div style={{ fontSize: '1.1rem', fontWeight: "bold" }}>
         🌅  {sunSet} 
         </div>
+      </div>
+
+      <div>
+        <LinearChartWeather />
       </div>
 
 
