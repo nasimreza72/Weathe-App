@@ -70,7 +70,7 @@ export default function LinearChartWeather(){
     return(
 
          <div className="LinearChartWeather">
-            <ResponsiveContainer className="graph-container" width={700} height={250}>
+            <ResponsiveContainer className="graph-container">
                 <AreaChart data={weeklyForecast}>
                     <defs>
                         <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">

@@ -68,8 +68,6 @@ function Weather() {
         style={{
           fontSize: "1.5rem",
           textShadow: "1px 1px 1.5px rgb(19, 86, 148)",
-          position:"relative",
-          bottom: "2rem"
         }}
       >
         {clouds}
