@@ -16,7 +16,7 @@ function Navigation() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="p-2 d-flex "
+            className="navigationPart p-2 d-flex "
             style={{ maxHeight: "190px" }}
             navbarScroll>
             <NavLink to="/main/metar">METAR</NavLink>

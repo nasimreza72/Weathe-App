@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { userContext } from "../Context/Context.jsx";
 import moment from "moment";
 import { Spinner } from "react-bootstrap";
@@ -38,7 +38,7 @@ function Weather() {
         <div
           style={{
             fontSize: "1.2rem",
-            textShadow: ".5px .5px .75px rgb(19, 86, 148)",
+            textShadow: ".25px .25px .5px rgb(19, 86, 148)",
           }}
         >
           {moment().format("llll")}
@@ -61,8 +61,7 @@ function Weather() {
             <div
               style={{
                 fontSize: "1.5rem",
-                textShadow: "1px 1px 1.5px rgb(19, 86, 148)",
-                marginBottom: '1rem'
+                textShadow: ".25px .25px .5px rgb(19, 86, 148)",
               }}
             >
               {clouds}

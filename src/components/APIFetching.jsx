@@ -109,8 +109,4 @@ export default function APIFetching(props) {
       .catch((error) => console.error(error));
   }, [ICAO]);
 
-  // writes the METAR into Local storage
-//   useEffect(()=>{
-//     localStorage.setItem("archieveData",JSON.stringify(archieveData))
-//   },[archieveData])
 }
